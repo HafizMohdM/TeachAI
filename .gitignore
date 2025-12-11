@@ -1,0 +1,17 @@
+# Python ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+backend/.env
+# VS Code
+.vscode/
+# OS
+.DS_Store
+Thumbs.db
+# Logs
+*.log
+#environment files
+.env

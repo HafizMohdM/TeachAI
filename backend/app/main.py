@@ -1,11 +1,11 @@
 from fastapi import FastAPI
+from app.api.v1.router import api_router
 
-app = FastAPI()
+app = FastAPI(title="SahayakAI Backend")
 
-@app.get("/")
-def home():
-    return {"message": "Sahayak AI Backend Running!"}
+app.include_router(api_router, prefix="/api/v1")
 
-@app.post("/generate-story")
-def generate_story():
-    return {"story": "Hello story!"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
